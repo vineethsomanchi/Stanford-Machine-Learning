@@ -20,12 +20,14 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
+%Calculate hypothesis (Multiply X before theta to suffice matrix multiplication rules)
+h = sigmoid(X * theta);
 
+#Calculate cost
+J = (1 / m) * sum(-y .* log(h) - (1 - y) .* log(1 - h));
 
-
-
-
-
+%Calculate gradient
+grad = (1 / m) * sum((h - y) .* X);
 
 % =============================================================
 

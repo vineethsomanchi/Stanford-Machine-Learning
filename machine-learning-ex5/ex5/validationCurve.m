@@ -39,6 +39,7 @@ error_val = zeros(length(lambda_vec), 1);
 %
 %
 
+
 m = size(X, 1);
 
 for i = 1:m
